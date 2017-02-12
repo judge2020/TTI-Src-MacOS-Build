@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<installer-script minSpecVersion="1.000000" authoringTool="com.apple.PackageMaker" authoringToolVersion="3.0.3" authoringToolBuild="174">
+    <title>Panda3D SDK 1.10.0</title>
+    <options customize="always" allow-external-scripts="no" rootVolumeOnly="false"/>
+    <license language="en" mime-type="text/plain">Copyright (c) 2008, Carnegie Mellon University.
+All rights reserved.
+
+Redistribution and use in source and binary forms, with or without
+modification, are permitted provided that the following conditions
+are met:
+
+1. Redistributions of source code must retain the above copyright
+   notice, this list of conditions and the following disclaimer.
+2. Redistributions in binary form must reproduce the above copyright
+   notice, this list of conditions and the following disclaimer in the
+   documentation and/or other materials provided with the distribution.
+3. Neither the name of Carnegie Mellon University nor the names of
+   other contributors may be used to endorse or promote products
+   derived from this software without specific prior written
+   permission.
+
+THIS SOFTWARE IS PROVIDED BY THE AUTHORS "AS IS" AND ANY EXPRESS OR
+IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES
+OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED.
+IN NO EVENT SHALL THE AUTHORS BE LIABLE FOR ANY DIRECT, INDIRECT,
+INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT
+NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
+DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
+THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
+(INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF
+THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+
+(This is the Modified BSD License.  See also
+http://www.opensource.org/licenses/bsd-license.php )
+</license>
+    <choices-outline>
+        <line choice="base"/>
+        <line choice="tools"/>
+        <line choice="headers"/>
+        <line choice="pythoncode"/>
+        <line choice="ffmpeg"/>
+        <line choice="fmodex"/>
+        <line choice="samples"/>
+    </choices-outline>
+    <choice id="base" title="Panda3D Base Installation" description="This package contains the Panda3D libraries, configuration files and models/textures that are needed to use Panda3D. Location: /Developer/Panda3D/" start_enabled="false">
+        <pkg-ref id="org.panda3d.panda3d.base.pkg"/>
+    </choice>
+    <choice id="tools" title="Tools" tooltip="Useful tools and model converters to help with Panda3D development" description="This package contains the various utilities that ship with Panda3D, including packaging tools, model converters, and many more. Location: /Developer/Panda3D/bin/">
+        <pkg-ref id="org.panda3d.panda3d.tools.pkg"/>
+    </choice>
+    <choice id="pythoncode" title="Python Support" tooltip="Python bindings for the Panda3D libraries" description="This package contains the 'direct', 'pandac' and 'panda3d' python packages that are needed to do Python development with Panda3D. Location: /Developer/Panda3D/">
+        <pkg-ref id="org.panda3d.panda3d.pythoncode.pkg"/>
+    </choice>
+    <choice id="ffmpeg" title="FFMpeg Plug-In" tooltip="FFMpeg video and audio decoding plug-in" description="This package contains the FFMpeg plug-in, which is used for decoding video and audio files with OpenAL.  It is not required for loading .wav or .ogg files, which Panda3D can read out of the box.">
+        <pkg-ref id="org.panda3d.panda3d.ffmpeg.pkg"/>
+    </choice>
+    <choice id="fmodex" title="FMOD Ex Plug-In" tooltip="FMOD Ex audio output plug-in" description="This package contains the FMOD Ex audio plug-in, which is a commercial library for playing sounds.  It is an optional component as Panda3D can use the open-source alternative OpenAL instead.">
+        <pkg-ref id="org.panda3d.panda3d.fmodex.pkg"/>
+    </choice>
+    <choice id="samples" title="Sample Programs" tooltip="Python sample programs that use Panda3D" description="This package contains the Python sample programs that can help you with learning how to use Panda3D. Location: /Developer/Examples/Panda3D/">
+        <pkg-ref id="org.panda3d.panda3d.samples.pkg"/>
+    </choice>
+    <choice id="headers" title="C++ Header Files" tooltip="Header files for C++ development with Panda3D" description="This package contains the C++ header files that are needed in order to do C++ development with Panda3D. You don't need this if you want to develop in Python. Location: /Developer/Panda3D/include/" start_selected="false">
+        <pkg-ref id="org.panda3d.panda3d.headers.pkg"/>
+    </choice>
+    <pkg-ref id="org.panda3d.panda3d.base.pkg" installKBytes="312576" version="1" auth="Root">file:./Contents/Packages/base.pkg</pkg-ref>
+    <pkg-ref id="org.panda3d.panda3d.tools.pkg" installKBytes="47521" version="1" auth="Root">file:./Contents/Packages/tools.pkg</pkg-ref>
+    <pkg-ref id="org.panda3d.panda3d.headers.pkg" installKBytes="13071" version="1" auth="Root">file:./Contents/Packages/headers.pkg</pkg-ref>
+    <pkg-ref id="org.panda3d.panda3d.pythoncode.pkg" installKBytes="59296" version="1" auth="Root">file:./Contents/Packages/pythoncode.pkg</pkg-ref>
+    <pkg-ref id="org.panda3d.panda3d.ffmpeg.pkg" installKBytes="48011" version="1" auth="Root">file:./Contents/Packages/ffmpeg.pkg</pkg-ref>
+    <pkg-ref id="org.panda3d.panda3d.fmodex.pkg" installKBytes="4777" version="1" auth="Root">file:./Contents/Packages/fmodex.pkg</pkg-ref>
+    <pkg-ref id="org.panda3d.panda3d.samples.pkg" installKBytes="20809" version="1" auth="Root">file:./Contents/Packages/samples.pkg</pkg-ref>
+</installer-script>
