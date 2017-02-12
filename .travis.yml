@@ -9,6 +9,7 @@ before_install:
   - brew install -f python apple-gcc42 freetype libav gtk+ wxmac eigen jpeg libpng ode --enable-double-precision libtiff 
   - brew install mongodb yaml-cpp
   - brew install soci
+  - brew install eigen
   - pip install bcrypt pymongo requests pycrypto semidbm pyyaml
   - sudo installer -pkg travis/Panda3D.mpkg -target /
   - 
