@@ -5,7 +5,7 @@ xcode_sheme: "Placeholder"
 before_install:
   - brew update && brew tap caskroom/cask && brew cleanup && brew cask cleanup
   - brew install homebrew/dupes/apple-gcc42
-  - brew install python apple-gcc42 freetype libav fftw --with-fortran gtk+ wxmac eigen jpeg libpng ode --enable-double-precision libtiff mongodb yaml-cpp soci
+  - brew install -f python apple-gcc42 freetype libav fftw --with-fortran gtk+ wxmac eigen jpeg libpng ode --enable-double-precision libtiff mongodb yaml-cpp soci
   - pip install bcrypt pymongo requests pycrypto semidbm pyyaml
   - sudo installer -pkg travis/Panda3D.mpkg -target /
   - 
