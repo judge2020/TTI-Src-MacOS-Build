@@ -1,0 +1,16 @@
+os: osx
+osx_image: xcode8.2
+xcode_workspace: "Placeholder"
+xcode_sheme: "Placeholder"
+before_install:
+  - brew update
+  - brew install homebrew/dupes/apple-gcc42
+  - brew install python apple-gcc42 freetype libav fftw --with-fortran gtk+ wxmac eigen jpeg libpng ode --enable-double-precision libtiff mongodb yaml-cpp soci
+  - pip install bcrypt pymongo requests pycrypto semidbm pyyaml
+  - sudo installer -pkg travis/Panda3D.mpkg -target /
+  - 
+
+script:
+  - cd tools
+  - python prepare_client.py --resources-dir=../resources -i cleanse.py -x rpc-invasions.py --vfs ../PPYTHON_PATH #this will be your own prepare client
+  - python build_client.py --build-dir build/toontown/toonbase --main-module ClientStart.py
