@@ -5,7 +5,7 @@ xcode_sheme: "Placeholder"
 before_install:
   - brew update && brew tap caskroom/cask && brew cleanup && brew cask cleanup
   - brew install homebrew/dupes/apple-gcc42
-  - brew install -f ode --enable-double-precision
+  - brew install -f ode
   - brew install -f wxmac
   - brew install -f freetype
   - brew install -f python libav jpeg libpng libtiff 
