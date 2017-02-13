@@ -12,7 +12,7 @@ before_install:
   - brew install -f jpeg
   - brew install -f libpng
   - brew install -f libtiff
-  - brew install -f python 
+#  - brew install -f python 
   - brew install -f gtk+
   - brew install -f apple-gcc42
   - brew install mongodb yaml-cpp
