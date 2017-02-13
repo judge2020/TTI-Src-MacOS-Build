@@ -8,7 +8,11 @@ before_install:
   - brew install -f ode
   - brew install -f wxmac
   - brew install -f freetype
-  - brew install -f python libav jpeg libpng libtiff 
+  - brew install -f libav
+  - brew install -f jpeg
+  - brew install -f libpng
+  - brew install -f libtiff
+  - brew install -f python 
   - brew install -f gtk+
   - brew install -f apple-gcc42
   - brew install mongodb yaml-cpp
