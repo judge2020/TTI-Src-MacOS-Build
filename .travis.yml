@@ -6,7 +6,9 @@ before_install:
   - brew update && brew tap caskroom/cask && brew cleanup && brew cask cleanup
   - brew install homebrew/dupes/apple-gcc42
   - brew install -f ode
-  - brew install -f python apple-gcc42 freetype libav gtk+ wxmac jpeg libpng ode --enable-double-precision libtiff 
+  - brew install -f wxmac
+  - brew install -f freetype
+  - brew install -f python apple-gcc42 libav gtk+ jpeg libpng ode --enable-double-precision libtiff 
   - brew install mongodb yaml-cpp
   - brew install soci
   - brew install eigen
