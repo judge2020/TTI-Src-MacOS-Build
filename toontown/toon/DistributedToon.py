@@ -57,6 +57,7 @@ from toontown.parties.SimpleMailBase import SimpleMailBase
 from toontown.shtiker.OptionsPage import speedChatStyles
 from toontown.speedchat import TTSCDecoders
 from toontown.suit import SuitDNA
+from toontown.toon import LaughingManGlobals
 from toontown.toonbase import TTLocalizer
 from toontown.toonbase import ToontownGlobals
 
@@ -2678,3 +2679,8 @@ def promote(deptIndex):
     invoker = spellbook.getInvoker()
     invoker.sendUpdate('requestPromotion', [deptIndex])
     return 'Your promotion request has been sent.'
+
+@magicWord(category=CATEGORY_PROGRAMMER)
+def magicCat():
+    LaughingManGlobals.addToonEffect(spellbook.getTarget())
+    return 'Became M@G1C C@T'
