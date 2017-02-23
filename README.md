@@ -4,5 +4,5 @@ This fork is an example of building a frozen Toontown module on mac. This is dem
 
 Click to see a successful build using Travis:
 
-[![Build Status](https://travis-ci.org/judge2020/src.svg?branch=master)](https://travis-ci.org/judge2020/src)
+[![Build Status](https://travis-ci.org/judge2020/TTI-Src-MacOS-Build.svg?branch=master)](https://travis-ci.org/judge2020/TTI-Src-MacOS-Build)
 =========
